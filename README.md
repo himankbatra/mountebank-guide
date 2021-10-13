@@ -1,9 +1,5 @@
 # Using MounteBank MockServer
 
-## Status
-
-**Accepted**
-
 ## Context
 
 * Mountebank provides configure virtual services, which are called imposters.
