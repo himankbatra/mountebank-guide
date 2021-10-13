@@ -1,0 +1,12 @@
+version: "3"
+services:
+  mountebank:
+    container_name: mountebank
+    image: bbyars/mountebank:latest
+    volumes:
+    - ./imposters:/imposters
+    ports:
+    - 2525:2525
+    - 1000:1000
+    - "4000-4500:4000-4500"
+    command: --configfile /imposters/imposters.ejs --allowInjection

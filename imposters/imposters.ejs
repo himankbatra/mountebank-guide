@@ -1,0 +1,27 @@
+{
+    "imposters": [
+        {
+            "port": 1000,
+            "protocol": "http",
+            "name": "Tutorial",
+            "stubs":
+            [{
+                "responses": [
+                  { "is": {
+                    "statusCode": 200,
+                    "headers": {
+                        "Content-Type": "application/json"
+                    },
+                    "body": {"message":"success"}
+                }}
+                ],
+                "predicates": [{
+                    "equals":{
+                        "method": "GET",
+                        "path": "/tutorial"
+                    }
+                }]
+              }]
+        }
+    ]
+}
