@@ -1,5 +1,9 @@
 # Using MounteBank MockServer
 
+## Status
+
+**Accepted**
+
 ## Context
 
 * Mountebank provides configure virtual services, which are called imposters.
@@ -421,7 +425,7 @@ cycling-through-response.json
 
 - imposters.ejs
 
-```json
+```ejs
 {
   "imposters": [
     <
@@ -459,7 +463,7 @@ cycling-through-response.json
 
 ```json
 {
-  "port": <port>,
+  "port": "<port>",
   "protocol": "http",
   "stubs": [
     {
@@ -467,7 +471,7 @@ cycling-through-response.json
       "responses": [
         {
           "is": {
-            "statusCode": <statusCode>,
+            "statusCode": "<statusCode>",
             "headers": {},
             "body": {}
           }
@@ -1206,11 +1210,11 @@ You can always add dynamic data to a response through an inject response, or thr
 
 > request
 
-```json
+
 GET /items/1 HTTP/1.1
 Host: localhost:3000
 
-```
+
 
 > response
 
@@ -1326,4 +1330,8 @@ mb restart  --configfile hello-world.json --pidfile &
 
 - [mbtest](http://www.mbtest.org/docs/gettingStarted)
 - [testing-microservices-with-mountebank](https://www.manning.com/books/testing-microservices-with-mountebank)
+
+
+
+
 
